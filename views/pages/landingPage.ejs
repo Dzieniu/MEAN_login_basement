@@ -1,0 +1,36 @@
+ <div class="col-md-12 col-xs-12 ">
+	<div class="logincont" >
+		<div style="padding-bottom: 50px;" ng-init="login=true" >
+		  <div  class="col-md-6" style="text-align: center;color:white;cursor:pointer" ng-class="{currentBook: login}"  ng-click="selected('login')">
+		  	<h3 style="margin-top: 10px;">Logowanie</h3>
+		  </div>
+		  <div class="col-md-6" style="text-align: center;color:white;cursor:pointer" ng-class="{currentBook: registerr}" ng-click="selected('register')">
+		  	<h3 style="margin-top: 10px;">Rejestracja</h3>
+		  </div>
+		</div>
+
+		<form ng-show="login" ng-submit="logIn()">
+	  	<h2 style="color:white;text-align: center;">Zaloguj się</h2>
+	  	<h3 style="color: white;">Użytkownik</h3>
+	  	<input type="text" placeholder="Nazwa użytkownika" ng-model="user.username" >
+
+	  	<h3 style="color: white;">Hasło</h3>
+	  	<input type="password" placeholder="Hasło" ng-model="user.password" >
+	  	<h3>
+	  	<button style="background-color: #5cc228; border-color: #5cc228"  type="submit" ui-sref-opts="{reload:true}" class="btn btn-info btn-block" ><b>Zaloguj</b></button>
+	  	</h3>
+		</form>
+
+		<form ng-show="registerr" ng-submit="register()">
+	  	<h2 style="color:white;text-align: center;">Zarejestruj się</h2>
+	  	<h3 style="color: white;">Wprowadź nazwę użytkownika</h3>
+	  	<input type="text" placeholder="Nazwa użytkownika"  ng-model="userRegister.username">
+
+	  	<h3 style="color: white;">Wprowadź hasło</h3>
+	  	<input type="password" placeholder="Hasło"  ng-model="userRegister.password" >
+	  	<h3>
+	  	<button style="background-color: #5cc228; border-color: #5cc228;"  type="submit" ui-sref-opts="{reload:true}" class="btn btn-info btn-block" ><b>Zaloguj</b></button>
+	  	</h3>
+		</form>
+	</div>
+</div>
